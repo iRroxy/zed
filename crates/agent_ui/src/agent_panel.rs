@@ -124,6 +124,7 @@ const KNOWN_TERMINAL_AGENT_COMMANDS: &[&str] = &[
     "gemini",
     "goose",
     "grok",
+    "omp",
     "openhands",
     "opencode",
     "pi",
@@ -7052,6 +7053,7 @@ mod tests {
     fn test_is_known_terminal_agent_command() {
         assert!(is_known_terminal_agent_command("claude"));
         assert!(is_known_terminal_agent_command("codex"));
+        assert!(is_known_terminal_agent_command("omp"));
         assert!(!is_known_terminal_agent_command("cargo"));
         assert!(!is_known_terminal_agent_command("internal-agent"));
     }

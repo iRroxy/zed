@@ -31,6 +31,7 @@ Common External Agents include:
 - Copilot
 - Cursor
 - Pi Coding Agent
+- OMP Coding Agent
 
 This list is curated, not exhaustive. Open the ACP Registry in Zed for the current list of available agents.
 
@@ -83,6 +84,26 @@ Cursor subscriptions do not configure Zed's LLM provider settings. Use Cursor's 
 Use Pi Coding Agent when you want Pi running as an ACP-integrated External Agent in Zed.
 
 Pi is an agent harness, not a Zed LLM subscription. Configure any provider auth, subscriptions, tools, or model choices in Pi.
+
+## OMP Coding Agent {#omp}
+
+Use OMP (Oh My Pi) when you want OMP running as an ACP-integrated External Agent in Zed.
+
+Make sure `omp` is available on your `PATH`, then configure it under `agent_servers` in your Zed `settings.json`:
+
+```json [settings]
+{
+  "agent_servers": {
+    "omp": {
+      "command": "omp",
+      "args": ["acp"],
+      "type": "custom"
+    }
+  }
+}
+```
+
+OMP runs as an ACP server over stdio via `omp acp`. You can also configure approval mode flags such as `["acp", "--yolo"]` or `["acp", "--approval-mode", "yolo"]` in `args` if desired.
 
 ## Poolside {#poolside}
 

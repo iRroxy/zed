@@ -203,6 +203,7 @@ static EXTENSION_TO_REGISTRY_IDS: LazyLock<HashMap<&'static str, &'static str>> 
             ("autohand-acp", "autohand"),
             ("corust-agent", "corust-agent"),
             ("factory-droid", "factory-droid"),
+            ("omp", "omp"),
             // Unmaintained
             // ("qqcode", ""),
         ])

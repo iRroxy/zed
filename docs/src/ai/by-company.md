@@ -77,6 +77,15 @@ Cursor subscriptions do not configure Zed's LLM provider settings. If you want t
 
 Pi is an agent harness, not a Zed LLM subscription. Pi may support provider auth such as ChatGPT, Claude, or Copilot through its own setup flow.
 
+## OMP {#omp}
+
+| Path               | Support level   | What you get                                        | Account / billing | Setup                                       |
+| ------------------ | --------------- | --------------------------------------------------- | ----------------- | ------------------------------------------- |
+| OMP External Agent | Hosted in Zed   | OMP in an External Agent thread, where available    | Owned by OMP      | [External Agents](./external-agents.md#omp) |
+| `omp` CLI/TUI      | Run in terminal | Native OMP command-line experience, where available | Owned by OMP      | [Terminal Threads](./terminal-threads.md)   |
+
+OMP (Oh My Pi) is an agent harness and ACP server. Configure provider authentication, models, and tools directly in OMP.
+
 ## Poolside {#poolside}
 
 | Path                    | Support level   | What you get                         | Account / billing               | Setup                                            |
